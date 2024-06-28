@@ -15,100 +15,102 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
 
-        {/* Header */}
-        <header className="bg-gradient-to-r from-purple-600 to-pink-600 p-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Image src="" alt="Logo" className="h-8 mr-3" />
-              <a href="/home" className="text-white hover:text-gray-100">Home</a>
-            </div>
-            
-            {/* Navigation */}
-            <ul className="flex">
-              <li className="mr-6">
-                <a href="/about" className="text-white hover:text-gray-100">About</a>
-              </li>
-              <li className="mr-6">
-                <a href="/services" className="text-white hover:text-gray-100">Services</a>
-              </li>
-              <li>
-                <a href="/contact" className="text-white hover:text-gray-100">Contact</a>
-              </li>
-            </ul>
+       {/* Header */}
+<header className="bg-gradient-to-r from-purple-600 to-pink-600 p-4">
+  <div className="flex flex-wrap items-center justify-between">
+    {/* Logo */}
+    <div className="flex items-center mb-2 md:mb-0">
+      <Image src="/logo.png" alt="Logo" className="h-8 mr-3" />
+      <a href="/home" className="text-white hover:text-gray-100">Home</a>
+    </div>
 
-            {/* Search */}
-            <div className="flex items-center ml-4">
-              <input type="text" placeholder="Search" className="border border-white px-2 py-1 rounded-md focus:outline-none focus:border-blue-500" />
-              <button className="ml-2 bg-white text-purple-600 px-3 py-1 rounded-md hover:bg-gray-100">Search</button>
-            </div>
-          </div>
-        </header>
+    {/* Navigation */}
+    <nav className="flex-grow mb-2 md:mb-0">
+      <ul className="flex flex-wrap justify-center md:justify-end">
+        <li className="mr-4 md:mr-6">
+          <a href="/about" className="text-white hover:text-gray-100">About</a>
+        </li>
+        <li className="mr-4 md:mr-6">
+          <a href="/services" className="text-white hover:text-gray-100">Services</a>
+        </li>
+        <li>
+          <a href="/contact" className="text-white hover:text-gray-100">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    {/* Search */}
+    <div className="flex items-center ml-0 md:ml-4 mt-2 md:mt-0 w-full md:w-auto">
+      <input type="text" placeholder="Search" className="border border-white px-2 py-1 rounded-md w-full md:w-auto focus:outline-none focus:border-blue-500" />
+      <button className="ml-2 bg-white text-purple-600 px-3 py-1 rounded-md hover:bg-gray-100">Search</button>
+    </div>
+  </div>
+</header>
+
 
         {children}
 
-        {/* Footer */}
-        <footer className="bg-gradient-to-r from-purple-600 to-pink-600 p-4">
-          <div className="flex justify-between items-center">
-            {/* Quick Links */}
-            <ul className="flex">
-              <li className="mr-6">
-                <a href="/" className="text-white hover:text-gray-100">Home</a>
-              </li>
-              <li className="mr-6">
-                <a href="/about" className="text-white hover:text-gray-100">About</a>
-              </li>
-              <li className="mr-6">
-                <a href="/services" className="text-white hover:text-gray-100">Services</a>
-              </li>
-              <li>
-                <a href="/contact" className="text-white hover:text-gray-100">Contact</a>
-              </li>
-            </ul>
-            
-            {/* Newsletter Signup */}
-            <div>
-              <form>
-                <label htmlFor="email" className="block text-sm font-medium text-white">Subscribe to our newsletter:</label>
-                <div className="mt-1 flex rounded-md shadow-sm">
-                  <input type="email" id="email" className="p-2 focus:ring-white focus:border-white block w-full sm:text-sm border-white rounded-md" placeholder="Enter your email" />
-                  <button type="submit" className="ml-2 bg-white hover:bg-gray-100 text-purple-600 font-bold py-2 px-4 rounded-md">Subscribe</button>
-                </div>
-              </form>
-            </div>
+      {/* Footer */}
+<footer className="bg-gradient-to-r from-purple-600 to-pink-600 p-4">
+  <div className="flex flex-wrap justify-between items-center">
+    {/* Quick Links */}
+    <ul className="flex flex-wrap mb-4 md:mb-0">
+      <li className="mr-4 md:mr-6">
+        <a href="/" className="text-white hover:text-gray-100">Home</a>
+      </li>
+      <li className="mr-4 md:mr-6">
+        <a href="/about" className="text-white hover:text-gray-100">About</a>
+      </li>
+      <li className="mr-4 md:mr-6">
+        <a href="/services" className="text-white hover:text-gray-100">Services</a>
+      </li>
+      <li>
+        <a href="/contact" className="text-white hover:text-gray-100">Contact</a>
+      </li>
+    </ul>
+    
+    {/* Newsletter Signup */}
+    <div className="mb-4 md:mb-0 w-full md:w-auto">
+      <form>
+        <label htmlFor="email" className="block text-sm font-medium text-white">Subscribe to our newsletter:</label>
+        <div className="mt-1 flex rounded-md shadow-sm">
+          <input type="email" id="email" className="p-2 focus:ring-white focus:border-white block w-full sm:text-sm border-white rounded-md" placeholder="Enter your email" />
+          <button type="submit" className="ml-2 bg-white hover:bg-gray-100 text-purple-600 font-bold py-2 px-4 rounded-md">Subscribe</button>
+        </div>
+      </form>
+    </div>
 
-            {/* Contact Information */}
-            <div>
-              <p className="text-sm text-white">
-                Address: 123 Street, City, Country<br />
-                Phone: +1234567890<br />
-                Email: info@example.com
-              </p>
-            </div>
+    {/* Contact Information */}
+    <div className="mb-4 md:mb-0 text-center md:text-left w-full md:w-auto">
+      <p className="text-sm text-white">
+        Address: 123 Street, City, Country<br />
+        Phone: +1234567890<br />
+        Email: info@example.com
+      </p>
+    </div>
 
-            {/* Social Media Links */}
-            <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-gray-100">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.165 6.84 9.49-.099-.866-.186-2.176.041-3.114.2-.832 1.293-5.308 1.293-5.308s-.328-.662-.328-1.643c0-1.542.895-2.694 2.012-2.694.945 0 1.402.711 1.402 1.564 0 .952-.605 2.368-.918 3.683-.262 1.18.553 2.142 1.707 2.142 2.047 0 3.626-2.153 3.626-5.253 0-2.745-1.972-4.68-4.774-4.68-3.261 0-5.2 2.447-5.2 4.983 0 1.012.389 2.097.875 2.684.1.12.112.226.084.356-.087.34-.278 1.083-.316 1.235-.05.193-.166.232-.366.143-1.342-.607-2.18-2.575-2.18-4.183 0-3.133 2.376-6.01 6.883-6.01 3.627 0 6.386 2.649 6.386 6.17 0 4.01-2.52 7.268-6.037 7.268-1.184 0-2.297-.62-2.676-1.355l-.453.175c-.174.066-.486.144-.735-.144-.267-.326-.988-1.147-1.137-1.565-.143-.394-.393-1.256-.393-1.265-.018-.039-.127-.193-.225-.333-.132-.18-.287-.392-.41-.633-.144-.316-.261-.679-.038-1.006.232-.333.53-.244.584-.225.226.083.445.13.68.13.264 0 .508-.097.723-.26.453-.366.594-.948.37-1.445-.16-.397-.513-.738-.946-.918A5.057 5.057 0 0 0 10 1.5c-2.886 0-5.174 2.593-5.174 5.742 0 2.364 1.541 4.263 3.63 4.263.925 0 1.81-.418 2.372-.912l.391-.348c.193-.175.332-.52.235-.78-.101-.3-.378-.59-.68-.59-.227 0-.445.154-.606.364-.325.398-.791.634-1.263.634-.979 0-1.752-.948-1.752-2.273 0-.88.324-1.624.996-2.182.711-.583 1.67-.756 2.59-.756 1.92 0 3.41 1.128 3.41 2.635 0 .548-.28 1.128-.645 1.496-.4.387-.955.71-1.543.71-.183 0-.376-.025-.568-.075-.274-.07-.552.098-.665.358-.291.683-.553 1.37-.553 2.594 0 3.48 2.441 7.736 7.23 7.736 4.2 0 6.77-2.908 6.77-6.614 0-3.466-2.813-6.274-6.356-6.274z" clipRule="evenodd" />
-                </svg>
-              </a>
-              <a href="#" className="text-white hover:text-gray-100">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.165 6.84 9.49-.099-.866-.186-2.176.041-3.114.2-.832 1.293-5.308 1.293-5.308s-.328-.662-.328-1.643c0-1.542.895-2.694 2.012-2.694.945 0 1.402.711 1.402 1.564 0 .952-.605 2.368-.918 3.683-.262 1.18.553 2.142 1.707 2.142 2.047 0 3.626-2.153 3.626-5.253 0-2.745-1.972-4.68-4.774-4.68-3.261 0-5.2 2.447-5.2 4.983 0 1.012.389 2.097.875 2.684.1.12.112.226.084.356-.087.34-.278 1.083-.316 1.235-.05.193-.166.232-.366.143-1.342-.607-2.18-2.575-2.18-4.183 0-3.133 2.376-6.01 6.883-6.01 3.627 0 6.386 2.649 6.386 6.17 0 4.01-2.52 7.268-6.037 7.268-1.184 0-2.297-.62-2.676-1.355l-.453.175c-.174.066-.486.144-.735-.144-.267-.326-.988-1.147-1.137-1.565-.143-.394-.393-1.256-.393-1.265-.018-.039-.127-.193-.225-.333-.132-.18-.287-.392-.41-.633-.144-.316-.261-.679-.038-1.006.232-.333.53-.244.584-.225.226.083.445.13.68.13.264 0 .508-.097.723-.26.453-.366.594-.948.37-1.445-.16-.397-.513-.738-.946-.918A5.057 5.057 0 0 0 10 1.5c-2.886 0-5.174 2.593-5.174 5.742 0 2.364 1.541 4.263 3.63 4.263.925 0 1.81-.418 2.372-.912l.391-.348c.193-.175.332-.52.235-.78-.101-.3-.378-.59-.68-.59-.227 0-.445.154-.606.364-.325.398-.791.634-1.263.634-.979 0-1.752-.948-1.752-2.273 0-.88.324-1.624.996-2.182.711-.583 1.67-.756 2.59-.756 1.92 0 3.41 1.128 3.41 2.635 0 .548-.28 1.128-.645 1.496-.4.387-.955.71-1.543.71-.183 0-.376-.025-.568-.075-.274-.07-.552.098-.665.358-.291.683-.553 1.37-.553 2.594 0 3.48 2.441 7.736 7.23 7.736 4.2 0 6.77-2.908 6.77-6.614 0-3.466-2.813-6.274-6.356-6.274z" clipRule="evenodd" />
-                </svg>
-              </a>
-              {/* Add more social media icons as needed */}
-            </div>
-          </div>
+    {/* Social Media Links */}
+    <div className="flex space-x-4">
+      <a href="#" className="text-white hover:text-gray-100">
+        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fillRule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.165 6.84 9.49-.099-.866-.186-2.176.041-3.114.2-.832 1.293-5.308 1.293-5.308s-.328-.662-.328-1.643c0-1.542.895-2.694 2.012-2.694.945 0 1.402.711 1.402 1.564 0 .952-.605 2.368-.918 3.683-.262 1.18.553 2.142 1.707 2.142 2.047 0 3.626-2.153 3.626-5.253 0-2.745-1.972-4.68-4.774-4.68-3.261 0-5.2 2.447-5.2 4.983 0 1.012.389 2.097.875 2.684.1.12.112.226.084.356-.087.34-.278 1.083-.316 1.235-.05.193-.166.232-.366.143-1.342-.607-2.18-2.575-2.18-4.183 0-3.133 2.376-6.01 6.883-6.01 3.627 0 6.386 2.649 6.386 6.17 0 4.01-2.52 7.268-6.037 7.268-1.184 0-2.297-.62-2.676-1.355l-.453.175c-.174.066-.486.144-.735-.144-.267-.326-.988-1.147-1.137-1.565-.143-.394-.393-1.256-.393-1.265-.018-.039-.127-.193-.225-.333-.132-.18-.287-.392-.41-.633-.144-.316-.261-.679-.038-1.006.232-.333.53-.244.584-.225.226.083.445.13.68.13.264 0 .508-.097.723-.26.453-.366.594-.948.37-1.445-.16-.397-.513-.738-.946-.918A5.057 5.057 0 0 0 10 1.5c-2.886 0-5.174 2.593-5.174 5.742 0 2.364 1.541 4.263 3.63 4.263.925 0 1.81-.418 2.372-.912l.391-.348c.193-.175.332-.52.235-.78-.101-.3-.378-.59-.68-.59-.227 0-.445.154-.606.364-.325.398-.791.634-1.263.634-.979 0-1.752-.948-1.752-2.273 0-.88.324-1.624.996-2.182.711-.583 1.67-.756 2.59-.756 1.92 0 3.41 1.128 3.41 2.635 0 .548-.28 1.128-.645 1.496-.4.387-.955.71-1.543.71-.183 0-.376-.025-.568-.075-.274-.07-.552.098-.665.358-.291.683-.553 1.37-.553 2.594 0 3.48 2.441 7.736 7.23 7.736 4.2 0 6.77-2.908 6.77-6.614 0-3.466-2.813-6.274-6.356-6.274z" clipRule="evenodd" />
+        </svg>
+      </a>
+      <a href="#" className="text-white hover:text-gray-100">
+        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fillRule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.165 6.84 9.49-.099-.866-.186-2.176.041-3.114.2-.832 1.293-5.308 1.293-5.308s-.328-.662-.328-1.643c0-1.542.895-2.694 2.012-2.694.945 0 1.402.711 1.402 1.564 0 .952-.605 2.368-.918 3.683-.262 1.18.553 2.142 1.707 2.142 2.047 0 3.626-2.153 3.626-5.253 0-2.745-1.972-4.68-4.774-4.68-3.261 0-5.2 2.447-5.2 4.983 0 1.012.389 2.097.875 2.684.1.12.112.226.084.356-.087.34-.278 1.083-.316 1.235-.05.193-.166.232-.366.143-1.342-.607-2.18-2.575-2.18-4.183 0-3.133 2.376-6.01 6.883-6.01 3.627 0 6.386 2.649 6.386 6.17 0 4.01-2.52 7.268-6.037 7.268-1.184 0-2.297-.62-2.676-1.355l-.453.175c-.174.066-.486.144-.735-.144-.267-.326-.988-1.147-1.137-1.565-.143-.394-.393-1.256-.393-1.265-.018-.039-.127-.193-.225-.333-.132-.18-.287-.392-.41-.633-.144-.316-.261-.679-.038-1.006.232-.333.53-.244.584-.225.226.083.445.13.68.13.264 0 .508-.097.723-.26.453-.366.594-.948.37-1.445-.16-.397-.513-.738-.946-.918A5.057 5.057 0 0 0 10 1.5c-2.886 0-5.174 2.593-5.174 5.742 0 2.364 1.541 4.263 3.63 4.263.925 0 1.81-.418 2.372-.912l.391-.348c.193-.175.332-.52.235-.78-.101-.3-.378-.59-.68-.59-.227 0-.445.154-.606.364-.325.398-.791.634-1.263.634-.979 0-1.752-.948-1.752-2.273 0-.88.324-1.624.996-2.182.711-.583 1.67-.756 2.59-.756 1.92 0 3.41 1.128 3.41 2.635 0 .548-.28 1.128-.645 1.496-.4.387-.955.71-1.543.71-.183 0-.376-.025-.568-.075-.274-.07-.552.098-.665.358-.291.683-.553 1.37-.553 2.594 0 3.48 2.441 7.736 7.23 7.736 4.2 0 6.77-2.908 6.77-6.614 0-3.466-2.813-6.274-6.356-6.274z" clipRule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
 
-          {/* Legal Information */}
-          <div className="mt-4 text-sm">
-            <a href="#" className="text-white hover:text-gray-100 mr-4">Privacy Policy</a>
-            <a href="#" className="text-white hover:text-gray-100">Terms of Service</a>
-            {/* Add more legal links as needed */}
-          </div>
-        </footer>
+  {/* Legal Information */}
+  <div className="mt-4 text-sm text-center">
+    <a href="#" className="text-white hover:text-gray-100 mr-4">Privacy Policy</a>
+    <a href="#" className="text-white hover:text-gray-100">Terms of Service</a>
+    {/* Add more legal links as needed */}
+  </div>
+</footer>
 
       </body>
     </html>
