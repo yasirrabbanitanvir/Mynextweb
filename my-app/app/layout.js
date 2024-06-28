@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     {/* Logo */}
     <div className="flex items-center mb-2 md:mb-0">
       <Image src="/logo.png" alt="Logo" className="h-8 mr-3" />
-      <a href="/home" className="text-white hover:text-gray-100">Home</a>
+      <a href="./" className="text-white hover:text-gray-100">Home</a>
     </div>
 
     {/* Navigation */}
@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
   <div className="mt-4 text-sm text-center">
     <a href="#" className="text-white hover:text-gray-100 mr-4">Privacy Policy</a>
     <a href="#" className="text-white hover:text-gray-100">Terms of Service</a>
-    {/* Add more legal links as needed */}
+   
   </div>
 </footer>
 
