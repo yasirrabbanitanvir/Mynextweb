@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <img src="" alt="Logo" className="h-8 mr-3" />
+              <Image src="" alt="Logo" className="h-8 mr-3" />
               <a href="/home" className="text-white hover:text-gray-100">Home</a>
             </div>
             

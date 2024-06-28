@@ -1,10 +1,6 @@
-
 export default function Home() {
   return (
-
-
     <main className="bg-gray-100">
-
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-purple-700 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -62,12 +58,11 @@ export default function Home() {
               {/* Example testimonial */}
               <div className="bg-white p-6 rounded-lg shadow-md max-w-lg">
                 <p className="text-lg mb-4">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim
-                  veniam."
+                  &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim
+                  veniam.&quot;
                 </p>
                 <p className="text-base font-semibold">John Doe</p>
               </div>
-              {/* Repeat for other testimonials */}
             </div>
           </div>
         </div>
@@ -90,7 +85,6 @@ export default function Home() {
                   Read More
                 </button>
               </div>
-              {/* Repeat for other featured content */}
             </div>
           </div>
         </div>
@@ -109,6 +103,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-
   );
 }
